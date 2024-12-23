@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Logo del restaurante chileno -->
+
+    <!-- Pastel de choclo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Logo del restaurante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/restaurant_chileno" />
+
+    <ImageView
+        android:id="@+id/image_pastel"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Imagen de pastel de choclo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/pastel_de_choclo" />
+
+    <TextView
+        android:id="@+id/pastel_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_pastel"
+        app:layout_constraintTop_toTopOf="@+id/image_pastel"
+        android:layout_marginStart="16dp"
+        android:text="Pastel de Choclo"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/quantity_pastel"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Cant."
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/image_pastel"
+        app:layout_constraintTop_toBottomOf="@+id/pastel_title" />
+
+    <TextView
+        android:id="@+id/pastel_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/quantity_pastel"
+        app:layout_constraintTop_toTopOf="@+id/quantity_pastel"
+        android:layout_marginStart="8dp"
+        android:text="$12.000"
+        android:textSize="14sp"
+        android:textColor="@color/black" />
+
+    <!-- Cazuela -->
+    <ImageView
+        android:id="@+id/image_cazuela"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_pastel"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@drawable/cazuela"
+        android:contentDescription="Imagen de cazuela" />
+
+    <TextView
+        android:id="@+id/cazuela_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_cazuela"
+        app:layout_constraintTop_toTopOf="@+id/image_cazuela"
+        android:layout_marginStart="16dp"
+        android:text="Cazuela"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/quantity_cazuela"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Cant."
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/image_cazuela"
+        app:layout_constraintTop_toBottomOf="@+id/cazuela_title" />
+
+    <TextView
+        android:id="@+id/cazuela_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/quantity_cazuela"
+        app:layout_constraintTop_toTopOf="@+id/quantity_cazuela"
+        android:layout_marginStart="8dp"
+        android:text="$10.000"
+        android:textSize="14sp"
+        android:textColor="@color/black" />
+
+    <!-- Totales y Propina -->
+    <TextView
+        android:id="@+id/label_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image_cazuela"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="Comida"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/total_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/label_food"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="$0.00"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="@color/black" />
+
+    <Switch
+        android:id="@+id/switch_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Incluir propina"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_food" />
+
+    <TextView
+        android:id="@+id/label_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/switch_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="Propina"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/label_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="$0.00"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/label_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tip_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="TOTAL"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/label_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="$0.00"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

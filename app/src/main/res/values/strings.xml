@@ -1,0 +1,21 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">Toma de Pedidos</string>
+
+    <!-- Pastel de choclo -->
+    <string name="pastel_title">Pastel de choclo</string>
+    <string name="pastel_hint_quantity">Cantidad</string>
+
+    <!-- Cazuela -->
+    <string name="cazuela_title">Cazuela</string>
+    <string name="cazuela_hint_quantity">Cantidad</string>
+
+    <!-- Totales y Propina -->
+    <string name="label_food">Comida</string>
+    <string name="hint_total_food">$0.00</string>
+    <string name="label_tip">Propina</string>
+    <string name="hint_tip_amount">$0.00</string>
+    <string name="label_total">TOTAL</string>
+    <string name="hint_total_amount">$0.00</string>
+    <string name="switch_tip">Incluir propina</string>
+</resources>
